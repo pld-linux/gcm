@@ -5,7 +5,7 @@ Summary:	GNOME Clipboard Manager - an application to manage your selections and 
 Summary(pl):	Zarz±dca schowka GNOME - aplikacja do zarz±dzania zaznaczeniami i schowkami
 Name:		gcm
 Version:	2.0.4
-Release:	2
+Release:	3
 License:	GPL
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
@@ -115,6 +115,8 @@ cd ../gcmapplet
 %{__aclocal}
 %{__autoconf}
 cd ..
+rm -f mkinstalldirs
+cp /usr/share/automake/mkinstalldirs .
 glib-gettextize --copy --force
 intltoolize --copy --force
 %{__libtoolize}
@@ -147,10 +149,12 @@ rm -rf $RPM_BUILD_ROOT
 
 %postun	-p /sbin/ldconfig
 
+%post   -n librtftohtml -p /sbin/ldconfig
+%postun -n librtftohtml -p /sbin/ldconfig
+
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog NEWS README TODO
-%doc %{_docdir}/%{name}
+%doc AUTHORS ChangeLog README TODO doc/*.html doc/*.png doc/HACKING
 %attr(755,root,root) %{_bindir}/gcm
 %attr(755,root,root) %{_bindir}/gcmui
 %attr(755,root,root) %{_libdir}/gcmapplet
