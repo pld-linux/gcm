@@ -16,7 +16,6 @@ BuildRequires:	intltool
 BuildRequires:	libtool
 BuildRoot:      %{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define         _prefix         /usr/X11R6
 
 %description
 GNOME Clipboard Manager (GCM) is an application for managing
