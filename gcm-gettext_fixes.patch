@@ -1,16 +1,14 @@
-diff -urN gcm-2.0.1.orig/configure.in gcm-2.0.1/configure.in
---- gcm-2.0.1.orig/configure.in	Fri Sep 27 00:17:59 2002
-+++ gcm-2.0.1/configure.in	Fri Sep 27 01:28:02 2002
-@@ -90,9 +90,9 @@
+diff -urN gcm-2.0.4.orig/configure.in gcm-2.0.4/configure.in
+--- gcm-2.0.4.orig/configure.in	Tue Mar  4 09:19:30 2003
++++ gcm-2.0.4/configure.in	Tue Mar  4 09:34:05 2003
+@@ -56,6 +56,10 @@
  localedir=${datadir}/locale
  AC_SUBST(localedir)
  
--dnl GETTEXT_PACKAGE=gcm
--dnl AC_SUBST(GETTEXT_PACKAGE)
--dnl AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE, "$GETTEXT_PACKAGE")
 +GETTEXT_PACKAGE=gcm
 +AC_SUBST(GETTEXT_PACKAGE)
 +AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE, "$GETTEXT_PACKAGE",[fix])
- 
- 
++
  dnl Set PACKAGE_LOCALE_DIR in config.h.
+ if test "x${prefix}" = "xNONE"; then
+   AC_DEFINE_UNQUOTED(PACKAGE_LOCALE_DIR, "${ac_default_prefix}/${DATADIRNAME}/locale")

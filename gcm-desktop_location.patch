@@ -1,19 +1,19 @@
-diff -urN gcm-2.0.1.orig/Makefile.am gcm-2.0.1/Makefile.am
---- gcm-2.0.1.orig/Makefile.am	Fri Sep 27 00:17:59 2002
-+++ gcm-2.0.1/Makefile.am	Fri Sep 27 01:19:17 2002
-@@ -18,7 +18,7 @@
+diff -urN gcm-2.0.4.orig/Makefile.am gcm-2.0.4/Makefile.am
+--- gcm-2.0.4.orig/Makefile.am	Tue Mar  4 09:19:30 2003
++++ gcm-2.0.4/Makefile.am	Tue Mar  4 09:22:47 2003
+@@ -20,7 +20,7 @@
  
- EXTRA_DIST = gcm $(gcmdoc_DATA)
  
--gnomemenudir = $(prefix)/@NO_PREFIX_PACKAGE_MENU_DIR@/Applications
-+gnomemenudir = $(prefix)/@NO_PREFIX_PACKAGE_MENU_DIR@/applications
- gnomemenu_DATA = gcm.desktop
  
- # Copy all the spec files. Of cource, only one is actually used.
-diff -urN gcm-2.0.1.orig/configure.in gcm-2.0.1/configure.in
---- gcm-2.0.1.orig/configure.in Fri Sep 27 00:17:59 2002
-+++ gcm-2.0.1/configure.in      Fri Sep 27 01:28:02 2002
-@@ -120,7 +120,7 @@
+-desktopdir  = $(datadir)/gnome/apps/Applications/Other/
++desktopdir  = $(datadir)/applications
+ desktop_in_files = gcm.desktop.in
+ desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
+ 
+diff -urN gcm-2.0.4.orig/configure.in gcm-2.0.4/configure.in
+--- gcm-2.0.4.orig/configure.in	Tue Mar  4 09:19:30 2003
++++ gcm-2.0.4/configure.in	Tue Mar  4 09:24:16 2003
+@@ -91,7 +91,7 @@
  dnl Set PACKAGE DIRs in config.h.
  packagepixmapsdir=share/pixmaps/${PACKAGE}
  packagehelpdir=share/gnome/help/${PACKAGE}
