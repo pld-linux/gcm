@@ -124,7 +124,7 @@ intltoolize --copy --force
 %{__autoconf}
 %configure \
 	--disable-schemas-install
-	    
+
 %{__make}
 
 %install
@@ -134,7 +134,7 @@ rm -rf $RPM_BUILD_ROOT
 	GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL=1
 
 #remove obsolete files:
-rm $RPM_BUILD_ROOT%{_libdir}/gcm/Plugins/*.{a,la}	
+rm $RPM_BUILD_ROOT%{_libdir}/gcm/Plugins/*.{a,la}
 
 %find_lang %{name}
 
@@ -149,7 +149,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog NEWS README TODO 
+%doc AUTHORS ChangeLog NEWS README TODO
 %doc %{_docdir}/%{name}
 %attr(755,root,root) %{_bindir}/gcm
 %attr(755,root,root) %{_bindir}/gcmui
