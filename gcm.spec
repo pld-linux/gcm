@@ -130,7 +130,8 @@ intltoolize --copy --force
 %install
 rm -rf $RPM_BUILD_ROOT
 %{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT
+	DESTDIR=$RPM_BUILD_ROOT \
+	GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL=1
 
 #remove obsolete files:
 rm $RPM_BUILD_ROOT%{_libdir}/gcm/Plugins/*.{a,la}	
