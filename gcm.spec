@@ -65,7 +65,7 @@ Statyczna biblioteka gcm.
 
 %package -n librtftohtml
 Summary:	RTF to HTML convert library
-Summary(pl):	Biblioteka konwertuj±ca RTF do HTML
+Summary(pl):	Biblioteka konwertuj±ca RTF do HTML-a
 Version:	%{librtftohtml_ver}
 Group:		X11/Development/Libraries
 
@@ -73,11 +73,11 @@ Group:		X11/Development/Libraries
 RTF to HTML convert library.
 
 %description -n librtftohtml -l pl
-Biblioteka konwertuj±ca RTF do HTML.
+Biblioteka konwertuj±ca RTF do HTML-a.
 
 %package -n librtftohtml-devel
 Summary:	Header files for RTF to HTML convert library
-Summary(pl):	Pliki nag³ówkowe biblioteki konwertuj±cej RTF do HTML
+Summary(pl):	Pliki nag³ówkowe biblioteki konwertuj±cej RTF do HTML-a
 Version:	%{librtftohtml_ver}
 Group:		X11/Development/Libraries
 Requires:	librtftohtml = %{librtftohtml_ver}
@@ -86,11 +86,11 @@ Requires:	librtftohtml = %{librtftohtml_ver}
 Header files for RTF to HTML convert library.
 
 %description -n librtftohtml-devel -l pl
-Pliki nag³ówkowe biblioteki konwertuj±cej RTF do HTML.
+Pliki nag³ówkowe biblioteki konwertuj±cej RTF do HTML-a.
 
 %package -n librtftohtml-static
 Summary:	Static RTF to HTML convert library
-Summary(pl):	Statyczna biblioteka konwertuj±ca RTF do HTML
+Summary(pl):	Statyczna biblioteka konwertuj±ca RTF do HTML-a
 Version:	%{librtftohtml_ver}
 Group:		X11/Development/Libraries
 Requires:	librtftohtml-devel = %{librtftohtml_ver}
@@ -99,7 +99,7 @@ Requires:	librtftohtml-devel = %{librtftohtml_ver}
 Static file for RTF to HTML convert library.
 
 %description -n librtftohtml-static -l pl
-Statyczna biblioteka konwertuj±ca RTF do HTML.
+Statyczna biblioteka konwertuj±ca RTF do HTML-a.
 
 %prep
 %setup -q
