@@ -127,6 +127,8 @@ intltoolize --copy --force
 %configure \
 	--disable-schemas-install
 
+rm -f gcmapplet/GNOME_GcmApplet.server{,.in}
+
 %{__make}
 
 %install
