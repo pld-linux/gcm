@@ -9,6 +9,7 @@ Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
+# Source0-md5:	27e5dbea93240195296113c874411136
 Patch0:		%{name}-desktop_location.patch
 Patch1:		%{name}-gettext_fixes.patch
 URL:		http://gcm.sf.net/
