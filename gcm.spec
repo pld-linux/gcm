@@ -8,7 +8,7 @@ Version:	2.0.4
 Release:	1
 License:	GPL
 Group:		X11/Applications
-Source0:	http://dl.sf.net/%{name}/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
 Patch0:		%{name}-desktop_location.patch
 Patch1:		%{name}-gettext_fixes.patch
 URL:		http://gcm.sf.net/
@@ -17,6 +17,8 @@ BuildRequires:	automake
 BuildRequires:	glib2-devel
 BuildRequires:	intltool
 BuildRequires:	libtool
+Requires(post):	/sbin/ldconfig
+Requires(post):	GConf2
 Requires:	librtftohtml = %{librtftohtml_ver}
 BuildRoot:      %{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -38,30 +40,43 @@ podstawowe, drugorzêdne lub w³asne.
 
 %package devel
 Summary:	Header files for gcm
+Summary(pl):	Pliki nag³ówkowe gcm
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}
 
 %description devel
 Header files for gcm.
 
+%description devel -l pl
+Pliki nag³ówkowe gcm.
+
 %package static
-Summary:	Static file for gcm
+Summary:	Static gcm library
+Summary(pl):	Statyczna biblioteka gcm
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}
 
 %description static
-Static files for gcm.
+Static gcm library.
+
+%description static -l pl
+Statyczna biblioteka gcm.
 
 %package -n librtftohtml
 Summary:	RTF to HTML convert library
+Summary(pl):	Biblioteka konwertuj±ca RTF do HTML
 Version:	%{librtftohtml_ver}
 Group:		X11/Development/Libraries
 
 %description -n librtftohtml
 RTF to HTML convert library.
 
+%description -n librtftohtml -l pl
+Biblioteka konwertuj±ca RTF do HTML.
+
 %package -n librtftohtml-devel
 Summary:	Header files for RTF to HTML convert library
+Summary(pl):	Pliki nag³ówkowe biblioteki konwertuj±cej RTF do HTML
 Version:	%{librtftohtml_ver}
 Group:		X11/Development/Libraries
 Requires:	librtftohtml = %{librtftohtml_ver}
@@ -69,14 +84,21 @@ Requires:	librtftohtml = %{librtftohtml_ver}
 %description -n librtftohtml-devel
 Header files for RTF to HTML convert library.
 
+%description -n librtftohtml-devel -l pl
+Pliki nag³ówkowe biblioteki konwertuj±cej RTF do HTML.
+
 %package -n librtftohtml-static
-Summary:	Static file for RTF to HTML convert library
+Summary:	Static RTF to HTML convert library
+Summary(pl):	Statyczna biblioteka konwertuj±ca RTF do HTML
 Version:	%{librtftohtml_ver}
 Group:		X11/Development/Libraries
 Requires:	librtftohtml-devel = %{librtftohtml_ver}
 
 %description -n librtftohtml-static
 Static file for RTF to HTML convert library.
+
+%description -n librtftohtml-static -l pl
+Statyczna biblioteka konwertuj±ca RTF do HTML.
 
 %prep
 %setup -q
@@ -121,46 +143,50 @@ rm -rf $RPM_BUILD_ROOT
 /sbin/ldconfig
 %gconf_schema_install
 
-%postun
-/sbin/ldconfig
+%postun	-p /sbin/ldconfig
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc ABOUT-NLS AUTHORS COPYING ChangeLog INSTALL NEWS README TODO 
+%doc AUTHORS ChangeLog NEWS README TODO 
+%doc %{_docdir}/%{name}
 %attr(755,root,root) %{_bindir}/gcm
 %attr(755,root,root) %{_bindir}/gcmui
 %attr(755,root,root) %{_libdir}/gcmapplet
 %attr(755,root,root) %{_libdir}/libgcm.so.*.*.*
-%attr(755,root,root) %{_libdir}/gcm//Plugins/*.so
 %dir %{_libdir}/gcm
-%doc %{_docdir}/%{name}
+%dir %{_libdir}/gcm/Plugins
+%attr(755,root,root) %{_libdir}/gcm/Plugins/*.so
 %{_datadir}/gnome-2.0/ui/*
 %{_desktopdir}/*
 %{_libdir}/bonobo/servers/*
-%{_mandir}/man1/gcm.1.gz
+%{_mandir}/man1/gcm.1*
 %{_pixmapsdir}/*
 %{_sysconfdir}/gconf/schemas/*
 
-
 %files devel
+%defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/gcm-config
+%attr(755,root,root) %{_libdir}/libgcm.so
+%{_libdir}/libgcm.la
 %{_includedir}/libgcm
 %{_pkgconfigdir}/libgcm.pc
-%{_mandir}/man1/gcm-config.1.gz
-%{_libdir}/libgcm.so
-%{_libdir}/libgcm.la
+%{_mandir}/man1/gcm-config.1*
 
 %files static
+%defattr(644,root,root,755)
 %{_libdir}/libgcm.a
 
 %files -n librtftohtml
+%defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/librtftohtml.so.*.*.*
 
 %files -n librtftohtml-devel
-%{_includedir}/librtftohtml
-%{_libdir}/librtftohtml.so
+%defattr(644,root,root,755)
+%attr(755,root,root) %{_libdir}/librtftohtml.so
 %{_libdir}/librtftohtml.la
+%{_includedir}/librtftohtml
 %{_pkgconfigdir}/librtftohtml.pc
 
 %files -n librtftohtml-static
+%defattr(644,root,root,755)
 %{_libdir}/librtftohtml.a
