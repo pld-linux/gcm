@@ -8,16 +8,16 @@ Version:	2.0.4
 Release:	4
 License:	GPL
 Group:		X11/Applications
-Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/gcm/%{name}-%{version}.tar.gz
 # Source0-md5:	27e5dbea93240195296113c874411136
 Patch0:		%{name}-desktop_location.patch
 Patch1:		%{name}-gettext_fixes.patch
-URL:		http://gcm.sf.net/
+URL:		http://gcm.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	glib2-devel
-BuildRequires:	intltool
 BuildRequires:	gnome-panel-devel
+BuildRequires:	intltool
 BuildRequires:	libtool
 Requires(post):	/sbin/ldconfig
 Requires(post):	GConf2
@@ -118,8 +118,8 @@ cd ../gcmapplet
 cd ..
 rm -f mkinstalldirs
 cp /usr/share/automake/mkinstalldirs .
-glib-gettextize --copy --force
-intltoolize --copy --force
+%{__glib_gettextize}
+%{__intltoolize}
 %{__libtoolize}
 %{__aclocal}
 %{__autoheader}
