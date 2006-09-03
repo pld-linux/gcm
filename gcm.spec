@@ -44,7 +44,7 @@ podstawowe, drugorzêdne lub w³asne.
 Summary:	Header files for gcm
 Summary(pl):	Pliki nag³ówkowe gcm
 Group:		X11/Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Header files for gcm.
@@ -56,7 +56,7 @@ Pliki nag³ówkowe gcm.
 Summary:	Static gcm library
 Summary(pl):	Statyczna biblioteka gcm
 Group:		X11/Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static gcm library.
