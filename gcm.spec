@@ -166,7 +166,7 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_libdir}/gcm/Plugins
 %attr(755,root,root) %{_libdir}/gcm/Plugins/*.so
 %{_datadir}/gnome-2.0/ui/*
-%{_desktopdir}/*
+%{_desktopdir}/*.desktop
 %{_libdir}/bonobo/servers/*
 %{_mandir}/man1/gcm.1*
 %{_pixmapsdir}/*
