@@ -2,7 +2,7 @@
 %define 	librtftohtml_ver	2.0.2
 
 Summary:	GNOME Clipboard Manager - an application to manage your selections and clipboards
-Summary(pl):	Zarz±dca schowka GNOME - aplikacja do zarz±dzania zaznaczeniami i schowkami
+Summary(pl.UTF-8):   ZarzÄ…dca schowka GNOME - aplikacja do zarzÄ…dzania zaznaczeniami i schowkami
 Name:		gcm
 Version:	2.0.4
 Release:	4
@@ -32,53 +32,53 @@ can be edited, manually created, deleted, copied, and pasted. The
 available selection types are clipboard, primary, secondary, or a
 custom atom.
 
-%description -l pl
-GCM (GNOME Clipboard Manager - zarz±dca schowka GNOME) to aplikacja do
-zarz±dzania zaznaczeniami i schowkami. Automatycznie zbiera zaznaczone
-fragmenty i umo¿liwia wybór, który fragment ma zostaæ wklejony.
-Zaznaczenia mog± byæ modyfikowane, rêcznie tworzone, usuwane,
-kopiowane i wklejane. Dostêpne rodzaje zaznaczeñ to schowek,
-podstawowe, drugorzêdne lub w³asne.
+%description -l pl.UTF-8
+GCM (GNOME Clipboard Manager - zarzÄ…dca schowka GNOME) to aplikacja do
+zarzÄ…dzania zaznaczeniami i schowkami. Automatycznie zbiera zaznaczone
+fragmenty i umoÅ¼liwia wybÃ³r, ktÃ³ry fragment ma zostaÄ‡ wklejony.
+Zaznaczenia mogÄ… byÄ‡ modyfikowane, rÄ™cznie tworzone, usuwane,
+kopiowane i wklejane. DostÄ™pne rodzaje zaznaczeÅ„ to schowek,
+podstawowe, drugorzÄ™dne lub wÅ‚asne.
 
 %package devel
 Summary:	Header files for gcm
-Summary(pl):	Pliki nag³ówkowe gcm
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe gcm
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Header files for gcm.
 
-%description devel -l pl
-Pliki nag³ówkowe gcm.
+%description devel -l pl.UTF-8
+Pliki nagÅ‚Ã³wkowe gcm.
 
 %package static
 Summary:	Static gcm library
-Summary(pl):	Statyczna biblioteka gcm
+Summary(pl.UTF-8):   Statyczna biblioteka gcm
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static gcm library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka gcm.
 
 %package -n librtftohtml
 Summary:	RTF to HTML convert library
-Summary(pl):	Biblioteka konwertuj±ca RTF do HTML-a
+Summary(pl.UTF-8):   Biblioteka konwertujÄ…ca RTF do HTML-a
 Version:	%{librtftohtml_ver}
 Group:		X11/Development/Libraries
 
 %description -n librtftohtml
 RTF to HTML convert library.
 
-%description -n librtftohtml -l pl
-Biblioteka konwertuj±ca RTF do HTML-a.
+%description -n librtftohtml -l pl.UTF-8
+Biblioteka konwertujÄ…ca RTF do HTML-a.
 
 %package -n librtftohtml-devel
 Summary:	Header files for RTF to HTML convert library
-Summary(pl):	Pliki nag³ówkowe biblioteki konwertuj±cej RTF do HTML-a
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe biblioteki konwertujÄ…cej RTF do HTML-a
 Version:	%{librtftohtml_ver}
 Group:		X11/Development/Libraries
 Requires:	librtftohtml = %{librtftohtml_ver}
@@ -86,12 +86,12 @@ Requires:	librtftohtml = %{librtftohtml_ver}
 %description -n librtftohtml-devel
 Header files for RTF to HTML convert library.
 
-%description -n librtftohtml-devel -l pl
-Pliki nag³ówkowe biblioteki konwertuj±cej RTF do HTML-a.
+%description -n librtftohtml-devel -l pl.UTF-8
+Pliki nagÅ‚Ã³wkowe biblioteki konwertujÄ…cej RTF do HTML-a.
 
 %package -n librtftohtml-static
 Summary:	Static RTF to HTML convert library
-Summary(pl):	Statyczna biblioteka konwertuj±ca RTF do HTML-a
+Summary(pl.UTF-8):   Statyczna biblioteka konwertujÄ…ca RTF do HTML-a
 Version:	%{librtftohtml_ver}
 Group:		X11/Development/Libraries
 Requires:	librtftohtml-devel = %{librtftohtml_ver}
@@ -99,8 +99,8 @@ Requires:	librtftohtml-devel = %{librtftohtml_ver}
 %description -n librtftohtml-static
 Static file for RTF to HTML convert library.
 
-%description -n librtftohtml-static -l pl
-Statyczna biblioteka konwertuj±ca RTF do HTML-a.
+%description -n librtftohtml-static -l pl.UTF-8
+Statyczna biblioteka konwertujÄ…ca RTF do HTML-a.
 
 %prep
 %setup -q
