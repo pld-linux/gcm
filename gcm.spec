@@ -2,7 +2,7 @@
 %define 	librtftohtml_ver	2.0.2
 
 Summary:	GNOME Clipboard Manager - an application to manage your selections and clipboards
-Summary(pl.UTF-8):   Zarządca schowka GNOME - aplikacja do zarządzania zaznaczeniami i schowkami
+Summary(pl.UTF-8):	Zarządca schowka GNOME - aplikacja do zarządzania zaznaczeniami i schowkami
 Name:		gcm
 Version:	2.0.4
 Release:	4
@@ -42,7 +42,7 @@ podstawowe, drugorzędne lub własne.
 
 %package devel
 Summary:	Header files for gcm
-Summary(pl.UTF-8):   Pliki nagłówkowe gcm
+Summary(pl.UTF-8):	Pliki nagłówkowe gcm
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -54,7 +54,7 @@ Pliki nagłówkowe gcm.
 
 %package static
 Summary:	Static gcm library
-Summary(pl.UTF-8):   Statyczna biblioteka gcm
+Summary(pl.UTF-8):	Statyczna biblioteka gcm
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
@@ -66,7 +66,7 @@ Statyczna biblioteka gcm.
 
 %package -n librtftohtml
 Summary:	RTF to HTML convert library
-Summary(pl.UTF-8):   Biblioteka konwertująca RTF do HTML-a
+Summary(pl.UTF-8):	Biblioteka konwertująca RTF do HTML-a
 Version:	%{librtftohtml_ver}
 Group:		X11/Development/Libraries
 
@@ -78,7 +78,7 @@ Biblioteka konwertująca RTF do HTML-a.
 
 %package -n librtftohtml-devel
 Summary:	Header files for RTF to HTML convert library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki konwertującej RTF do HTML-a
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki konwertującej RTF do HTML-a
 Version:	%{librtftohtml_ver}
 Group:		X11/Development/Libraries
 Requires:	librtftohtml = %{librtftohtml_ver}
@@ -91,7 +91,7 @@ Pliki nagłówkowe biblioteki konwertującej RTF do HTML-a.
 
 %package -n librtftohtml-static
 Summary:	Static RTF to HTML convert library
-Summary(pl.UTF-8):   Statyczna biblioteka konwertująca RTF do HTML-a
+Summary(pl.UTF-8):	Statyczna biblioteka konwertująca RTF do HTML-a
 Version:	%{librtftohtml_ver}
 Group:		X11/Development/Libraries
 Requires:	librtftohtml-devel = %{librtftohtml_ver}
